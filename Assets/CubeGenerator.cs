@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CubeGenerator : MonoBehaviour {
 
+       // 地面の位置    課題追加
+      //  private float groundLevel = -3.0f;
 
 
     // キューブのPrefab
@@ -34,15 +36,24 @@ public class CubeGenerator : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    void Start() {
+
+    }
+
+    // 衝突時に呼ばれる関数　　課題追加
+    //  void OnCollisionEnter(Collision other)
+
+   //   {
+   //     GetComponent<AudioSource>().Play() ;
+   //  }　
+
+    
 
 
+    // Update is called once per frame
+    void Update() {
 
+                
         this.delta += Time.deltaTime;
 
         // span秒以上の時間が経過したかを調べる
@@ -64,8 +75,14 @@ public class CubeGenerator : MonoBehaviour {
         }
 
 
-
+       
 
 
     }
+
 }
+
+    
+
+    
+  

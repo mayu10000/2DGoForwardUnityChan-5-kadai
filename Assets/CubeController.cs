@@ -20,9 +20,9 @@ public class CubeController : MonoBehaviour {
 
         		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
 
 
         // キューブを移動させる
@@ -34,8 +34,18 @@ public class CubeController : MonoBehaviour {
             Destroy(gameObject);
         }
 
-
-
-        
     }
-}
+
+
+        //衝突時に呼ばれる関数　　課題追加
+        void OnCollisionEnter2D(Collision2D other)
+
+        {
+            if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Cube")
+            {
+                GetComponent<AudioSource>().Play();
+            }
+        }
+
+    }
+
